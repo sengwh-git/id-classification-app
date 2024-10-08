@@ -10,8 +10,7 @@ Frontend: A React application that provides UI for uploading a test image and di
 ## Getting Started
 ### Clone the repository
 ```
-git clone https://github.com/your_username/your_project.git
-cd your_project
+git clone https://github.com/sengwh-git/id-classification-app.git
 ```
 
 ### Running the services
