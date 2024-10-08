@@ -1,0 +1,18 @@
+.DS_Store
+**/__pycache__/
+
+/archive/
+
+# ignore images
+/preprocess_modeling/data/
+
+# ignore YOLO files
+/preprocess_modeling/yolo_segmentation/datasets/
+/preprocess_modeling/yolo_segmentation/runs/
+
+# ignore frontend files
+/app/frontend/node_modules/
+/app/frontend/build/
+
+Case Study.pdf
+*.docx

@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  model-container:
+    build:
+      context: ./model
+    image: model-container-image
+    volumes:
+      - model_data:/model
+    command: ["true"]
+
+  backend-service:
+    build:
+      context: ./backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - model_data:/model
+    depends_on:
+      - model-container
+    environment:
+      - MODEL_DIR=/model
+
+  frontend-ui:
+    build:
+      context: ./frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend-service
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+
+volumes:
+  model_data:

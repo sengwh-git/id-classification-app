@@ -1,0 +1,83 @@
+.upload-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+.upload-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.file-input-container {
+  margin-bottom: 20px;
+  position: relative;
+  width: 300px;
+  height: 200px;
+  border: 2px dashed #aaa;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border-color 0.3s, color 0.3s;
+}
+
+.file-input-container.drag-active {
+  border-color: #0066cc;
+}
+
+.file-upload-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #aaa;
+  font-size: 1.2em;
+}
+
+.file-input-container.drag-active .file-upload-label {
+  color: #0066cc;
+}
+
+.file-input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #0066cc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #005bb5;
+}
+
+.image-preview {
+  margin-top: 20px;
+}
+
+.image-preview img {
+  max-width: 300px;
+  max-height: 300px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.result, .error {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.error p {
+  color: red;
+}
